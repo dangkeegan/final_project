@@ -29,7 +29,7 @@ class NavManager(Node):
         self.arm_action_client = ActionClient(self, ArmAction, 'arm_action_topic')
         # Can also declare some variables as parameters that can be called
         # from a launch file or the command line
-        self.declare_parameter('goal_position', [3.894, -13.830, 0.115])
+        self.declare_parameter('goal_position', [5.51, -9.92, 0.115])
         self.declare_parameter('block_position', [0.2, 0.0, 0.02])
 
         self.goal_pos = self.get_parameter('goal_position').value

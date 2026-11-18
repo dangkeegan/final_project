@@ -29,6 +29,7 @@ def generate_launch_description():
     nav_launch = IncludeLaunchDescription(    
         PythonLaunchDescriptionSource(
             os.path.join(rosbot_rosbot_nav_pkg_path, 'launch', 'bringup_launch.py')),
+            launch_arguments=[("use_composition", "False")]
     )
     arm_launch = IncludeLaunchDescription(    
         PythonLaunchDescriptionSource(
@@ -40,6 +41,7 @@ def generate_launch_description():
     return launch.LaunchDescription([
         sensors_launch,
         arm_launch,
+        nav_rviz_launch,
     ])
 
 

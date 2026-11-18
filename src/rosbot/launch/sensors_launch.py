@@ -66,7 +66,7 @@ def generate_launch_description():
     return launch.LaunchDescription([
         sllidar_node,
         orbbec_launch,
-        laser_filter_node #,
+        laser_filter_node,
         # rviz_node
     ])
 
